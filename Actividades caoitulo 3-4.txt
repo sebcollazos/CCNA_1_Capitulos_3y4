@@ -1,0 +1,107 @@
+Actividades capítulo 3 y 4
+
+UNIVERSIDAD DEL CAUCA
+FECHA: 13 de marzo del 2023
+NOMBRE: Sebastian Collazos
+CÓDIGO DE SIMCA: 104618021467
+
+1.	Leer el capítulo 3 y 4 del curso de Cisco.
+2.	Responder las preguntas de lectura y enviarlas en PDF.
+
+Preguntas de lectura:  Capítulo 3
+1.	Describir las funciones de las tres capas superiores del modelo OSI y como estas proporcionan servicios de red a las aplicaciones de usuario final.
+
+La capa numero siete es la capa de la aplicación, la cual proporciona una interfaz para el usuario y con la cual va a comunicarse con la red, utilizan protocolos para intercambiar datos entre programas. La capa de presentación cumple con tres funciones principales: primero codifica y convierte datos de la capa de aplicación, garantizando que los datos sean interpretados por el dispositivo correcto; también debe poder comprimir los datos para el dispositivo de destino; por último, debe encriptar los datos a transmitir y descifrar los datos recibidos. La capa cinco es la capa de sesión y se encarga de mantener una “conversación” entre las aplicaciones de origen y destino, es la encargada del intercambio de información para mantener las sesiones.
+
+2.	Dentro de la capa de Aplicación, existen dos formas de procesos o programas de software que proporcionan acceso a la red: aplicaciones y servicios. Describir su respectiva función y/o propósito.
+
+Las aplicaciones son los programas que utilizan los clientes para comunicarse con la red por medio de interfaces gráficas, por lo que implementa protocolos de la capa de aplicación y además pueden comunicarse con las capas inferiores. Por otro lado, los servicios de la capa de aplicación pueden brindar ayuda a otros servicios para utilizar servicios de red como la transferencia de archivos; estos servicios no son visibles para el usuario, pero ayudan a preparar los datos para la transferencia. Cada servicio utiliza protocolos para comunicarse sin estos no habría manera en común para formatear y direccionar datos.
+
+3.	Explicar, por medio de un dibujo, el funcionamiento del modelo cliente-servidor y su relación con el término Daemon.
+
+El modelo cliente servidor es cuando el dispositivo denominado cliente pide información al dispositivo denominado servidor, estos procesos hacen parte de la capa de ampliación
+
+
+
+4.	Describir la diferencia entre los términos: redes punto a punto y aplicaciones punto a punto (P2P).
+
+Una red punto a punto consiste de dos o más computadoras conectadas a través de la red y no es necesario de un servidor para funcionar, pues un PC puede funcionar como servidor y otro como cliente, o al revés. Por otro lado, las aplicaciones punto a punto permiten actuar a un dispositivo como cliente y servidor, además necesitan de una interfaz de usuario y que se ejecute un servicio en segundo plano, luego de eso ya es posible comunicarse.
+
+5.	Explicar, con sus palabras, los procesos y protocolos de envío y recepción de un e-mail.
+
+
+
+6.	Describir la función de las aplicaciones TCP/IP conocidas, tales como World Wide Web e e-mail y sus servicios relacionados (HTTP, DNS, SMB, DHCP, SMTP/POP y Telnet). 
+
+La world wide web es un sistema que funciona a través de internet por el cual se pueden transmitir datos por medio del protocolo HTTP. Por otro lado, el e-mail es utilizado para enviar mensajes de clientes a servidores a través de internet utilizando protocolos como SMTP o POP.
+
+•	DNS: Los nombres de dominio fueron creados para evitar tener que recordar miles de direcciones IP, por lo que se encubren con nombres más fáciles de recordar como por ejemplo “www.google.com.co” esto da paso a poder cambiar de IP y que para el usuario sea transparente.
+•	HTTP: Es un protocolo creado para transferencia de datos y es de los mas utilizados. Cuando un cliente utiliza un explorador manda una solicitud a un servidor y el protocolo define el tipo de mensaje que se está utilizando para solicitar una página web.
+•	SMTP/POP: Por un lado, el protocolo SMTP se encarga de mandar los mails desde el cliente hacia el servidor, en cambio el protocolo POP cumple la función contraria enviando datos desde el servidor al cliente. El SMTP permite mandar datos a diferentes softwares.
+•	DHCP: Este servicio protocolo permite a los dispositivos obtener las direcciones IP, también asigna direcciones IP, máscaras subred, gateways, etc. DHCP hace posible las conexiones inalámbricas en aeropuertos o cafés, lo que sucede es que el cliente pide una IP y el protocolo se la “alquila”.
+•	SMB: Es un protocolo cliente-servidor utilizado para compartir archivos, funciona por solicitud-respuesta mediante una conexión a largo plazo entre el cliente y el servidor; luego de establecer una conexión es posible para el cliente acceder a los recursos del servidor como si estuvieran de manera local.
+•	TELNET: Es un servicio protocolo el cual emula una terminal basada en texto en la red de datos; el cliente que implementa este protocolo se conoce como telnet. Una conexión que utiliza telnet se llama sesión o conexión de terminal virtual (VTY). Telnet utiliza software para crear dispositivos virtuales que proporciona las mismas funciones que una sesión en una terminal con acceso a la red.
+
+7.	Investigar y explicar la diferencia entre Telnet y SSH
+
+Entre las diferencias sobre telnet y SSH tenemos que el segundo es más seguro, también utilizan datos diferentes; telnet no utiliza formato para los datos, mientras que SSH los encripta y utiliza un canal seguro. La autentificación por parte de telnet es inexistente, mientras que en SSH se utiliza un cifrado de clave publica; por ese motivo se recomiendas redes privadas para telnet y SSH puede usar redes públicas. El único punto a favor de telnet es su bajo consumo de ancho de banda.
+
+8.	Utilizando la utilidad nslookup obtener manualmente la dirección IP de al menos tres (3) sitios web que usted frecuente. 
+
+•	Simca: IP 45.231.185.45
+•	Unicauca: IP 45.231.185.44
+•	Unidades Ambientales: IP 45.231.184.220
+
+9.	Utilizando la utilidad nslookup obtener manualmente la url asociada a las siguientes direcciones IP: 10.200.1.250, 10.20.5.11, 10.20.4.43 
+
+
+
+
+Preguntas de lectura: Capítulo 4
+1.	Describir las funciones de la capa de Transporte.
+
+Dentro las responsabilidades de la capa de transporte se deben: dar seguimiento a la comunicación, hacer segmentación a los datos, hacer reensamble de los segmentos en flujos de datos e identificar las diferentes aplicaciones.
+
+•	Seguimiento de conversaciones: un host puede tener múltiples aplicaciones enviando mensajes entre mas aplicaciones por lo que es responsabilidad de la capa de transporte mantener los streams de comunicaciones entre ellas.
+•	Segmentación de datos: Ya que cada aplicación genera un stream es necesario enviar datos en tamaños razonables; los protocolos de la capa de transporte describen como segmentar los datos, incluyendo la encapsulación necesaria en cada sección.
+•	Reensamble de segmentos: Cada sección de los datos debe ser enviada a la aplicación adecuada. Además, los fragmentos de los datos deben ser reconstruidos para generar un stream completo y legible para la capa de aplicación.
+•	Identificación de las aplicaciones: Para poder enviar los datos es necesario la aplicación de destino. Para lograr esto se asigna un identificador de aplicación o también conocido como identificador de puertos. La forma de controlar los números de puertos es asignarlos a todo software que requiera conectarse a la red.
+
+2.	¿Por qué es importante la segmentación?
+
+La segmentación es importante porque existe un máximo de datos los cuales pueden enviarse a la vez en una red. Este procedimiento divide en partes más pequeñas los datos, es la capa de transporte la que se encarga de tal tarea desde el origen; por otro lado la capa de transporte también se encargar de reensamblar los datos en la aplicación de destino.
+
+3.	Describir a través de un cuadro de ideas, las funciones y diferencias de dos protocolos TCP/IP de la capa de transporte: TCP y UDP, además Identificar cuándo es apropiado usar TCP o UDP y proveer ejemplos de aplicaciones que usan cada protocolo.
+
+Los momentos adecuados para utilizar TCP es cuando requerimos de una fiabilidad respecto al envío de datos, y de modo contrario el protocolo UDP permite enviar más información, pero perdiendo fiabilidad y con posibilidad de perdida de datos por el trayecto. Algunos ejemplos de TCP pueden ser la descarga de películas o juegos; y un ejemplo del uso del protocolo UDP son plataformas de stream donde perder un paquete solo se verá reflejado en un pequeño corte en la transmisión.
+
+	TCP	UDP
+FUNCIONES	-	Numeración de los segmentos
+-	Uso de temporizadores para los segmentos perdidos
+-	Se descartan los segmentos duplicados	-	Permite el envío de datos sin necesidad de una conexión
+-	Añade multiplexado de aplicación y suma de verificación de la cabecera y la carga útil
+DIFERENCIAS	-	Es un protocolo orientado a conexión
+-	Totalmente fiable en la entrega de datos
+-	Se utiliza un mecanismo de flujo para evitar la saturación
+-	Todos los datos enviados llegan en el orden correcto	-	No requiere de una conexión para enviar datos
+-	No utiliza métodos para garantizar la entrega de datos
+-	Al ser más ligeros no requiere mecanismos de flujos
+-	Al no tener tanta información para enviar la velocidad es mayor
+
+
+4.	Explicar cómo funciona y para que se utiliza el control de congestión de TCP.
+
+El control de congestión se divide en control de flujo y reducción del tamaño de la ventana. Para el control de flujo contribuye a la confiabilidad ajustando la tasa de flujo que mejor se adapte a los servicios. Para complementar el flujo de datos se utilizan tamaños dinámicos de ventanas, esto cuando los recursos de red son limitados. Esto disminuye muchísimo la tasa de transmisión, ya que el origen espera que los datos sean recibidos con más frecuencia.
+
+5.	Explicar las funciones clave de la capa de Transporte incluyendo confiabilidad, direccionamiento de puerto y segmentación.
+
+
+
+6.	¿Cuáles son los diferentes tipos de número de puerto?
+
+Los tipos de puerto son:
+
+•	Puertos bien conocidos: son del 0 al  1023 y se reservados para servicios y aplicaciones.
+•	Puertos registrados: son del 1024 al 49151 y son para procesos y aplicaciones del usuario.
+
+7.	Explicar, por medio de un dibujo, el establecimiento y finalización de una conexión TCP (intercambio de señales de tres vías).
